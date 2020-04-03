@@ -20,6 +20,6 @@ loop.run_until_complete(
     asyncio.gather(
         print_every_minute(),
         print_every_second(),
-    )
+    ),
 )
 loop.close()
