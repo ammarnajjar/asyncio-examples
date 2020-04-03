@@ -39,5 +39,5 @@ jobs:
 
       - name: Run tests
         run: |
-          pip install pytest pytest-asyncio
-          pytest -v
+          pip install pytest pytest-asyncio pytest-cov
+          pytest -v --cov --cov-fail-under=100 --cov-report term-missing
