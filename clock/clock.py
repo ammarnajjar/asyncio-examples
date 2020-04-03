@@ -14,12 +14,13 @@ async def print_every_second():
             await asyncio.sleep(1)
 
 
-loop = asyncio.get_event_loop()
+if __name__ == '__main__':  # pragma no cover
+    loop = asyncio.get_event_loop()
 
-loop.run_until_complete(
-    asyncio.gather(
-        print_every_minute(),
-        print_every_second(),
-    ),
-)
-loop.close()
+    loop.run_until_complete(
+        asyncio.gather(
+            print_every_minute(),
+            print_every_second(),
+        ),
+    )
+    loop.close()
